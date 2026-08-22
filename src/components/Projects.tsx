@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ExternalLink, Calendar, User, ChevronRight } from 'lucide-react'
 import { GithubIcon } from '@/components/GithubIcon'
+import GithubRepos from '@/components/GithubRepos'
 import { projects } from '@/data/portfolio'
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
@@ -134,6 +135,8 @@ export default function Projects() {
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
         </div>
+
+        <GithubRepos />
       </div>
     </section>
   )

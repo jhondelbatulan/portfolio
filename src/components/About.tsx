@@ -52,7 +52,7 @@ export default function About() {
                   { icon: User, label: 'Name', value: personalInfo.name },
                   { icon: GraduationCap, label: 'Degree', value: 'BS Information Technology' },
                   { icon: MapPin, label: 'Location', value: personalInfo.location.split(',')[0] + ', ' + personalInfo.location.split(',')[1]?.trim() },
-                  { icon: Calendar, label: 'Graduating', value: '2027' },
+                  { icon: Calendar, label: 'Graduated', value: '2027' },
                 ].map((item) => (
                   <div
                     key={item.label}
