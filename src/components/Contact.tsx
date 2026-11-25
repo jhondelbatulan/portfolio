@@ -6,6 +6,8 @@ import { personalInfo } from '@/data/portfolio'
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
+  const [methodsRef, methodsInView] = useInView({ triggerOnce: true, threshold: 0.1 })
+  const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   const contactMethods = [
     {
@@ -59,9 +61,9 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
-            ref={ref}
+            ref={methodsRef}
             initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={methodsInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-4"
           >
@@ -72,7 +74,7 @@ export default function Contact() {
                 target={method.label === 'GitHub' ? '_blank' : undefined}
                 rel={method.label === 'GitHub' ? 'noopener noreferrer' : undefined}
                 initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                animate={methodsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                 className="flex items-center gap-4 p-4 rounded-xl bg-dark-800/50 border border-dark-700/50 card-hover group"
               >
@@ -94,9 +96,9 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            ref={ref}
+            ref={ctaRef}
             initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={ctaInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex items-center"
           >

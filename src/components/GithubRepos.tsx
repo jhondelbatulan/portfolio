@@ -162,11 +162,10 @@ export default function GithubRepos() {
           </span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          More From My <span className="text-gradient">Repositories</span>
+          Recent <span className="text-gradient">Repositories</span>
         </h2>
         <p className="text-dark-400 max-w-2xl mb-12">
-          Live previews pulled straight from my GitHub — each card shows a snapshot of the
-          repository homepage.
+          Explore selected projects from my GitHub, with repository details and links to the source code.
         </p>
       </motion.div>
 

@@ -18,7 +18,15 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-950/70 to-dark-950" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-24">
+        <motion.img
+          src={`${import.meta.env.BASE_URL}images/jhondel-batulan.jpg`}
+          alt="Portrait of Jhondel Batulan"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="w-32 h-32 sm:w-40 sm:h-40 object-cover object-top rounded-full border-4 border-primary-400/50 shadow-xl shadow-primary-950/40 mx-auto mb-8"
+        />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -1,14 +1,14 @@
 export const personalInfo = {
   name: "Jhondel Batulan",
-  title: "BSIT Graduate",
+  title: "BSIT Student",
   tagline: "Full Stack Developer",
   email: "jhondelbatulan1@gmail.com",
   phone: "+639126629711",
   location: "Cabadbaran City, Agusan Del Norte, Philippines, 8605",
   github: "https://github.com/jhondelbatulan",
-  facebook: "https://facebook.com/Jhondel Batulan",
-  about: `Hello, welcome to my portfolio. I am a graduate of Bachelor of Science in Information Technology. I'm a Full Stack Developer (PHP, Flutter, JavaScript), ready for all kind of web/mobile app projects.`,
-  aboutDetailed: `I am a passionate and driven Full Stack Developer with a Bachelor's degree in Information Technology from Caraga State University - Cabadbaran Campus. I specialize in building robust web and mobile applications using PHP, Flutter, and JavaScript. With hands-on experience in frameworks like Laravel, Node.js, and Express, I enjoy turning complex problems into simple, elegant, and scalable solutions. I am always eager to learn new technologies and take on challenging projects that push my skills further.`,
+  facebook: "",
+  about: `I am an Information Technology student at Caraga State University - Cabadbaran Campus, building web and mobile applications with PHP, Flutter, and JavaScript.`,
+  aboutDetailed: `I am a Full Stack Developer and Information Technology student at Caraga State University - Cabadbaran Campus, working toward my bachelor's degree in 2027. I build web and mobile applications with PHP, Flutter, and JavaScript, and have hands-on experience with Laravel, Node.js, and Express. I enjoy turning practical problems into useful software and continue to grow through project work.`
 }
 
 export interface Skill {
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       "Household participation tracking",
     ],
     github: "https://github.com/jhondelbatulan/village-management-system",
-    liveDemo: "",
+    liveDemo: "https://multi-village-management-system.wasmer.app/",
     role: "Backend Development",
     date: "Jul 2026",
     image: "/portfolio/images/project-village.jpg",

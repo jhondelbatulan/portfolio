@@ -5,6 +5,8 @@ import { personalInfo } from '@/data/portfolio'
 
 export default function About() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
+  const [detailsRef, detailsInView] = useInView({ triggerOnce: true, threshold: 0.1 })
+  const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   const stats = [
     { label: 'Programming Languages', value: '5+' },
@@ -36,9 +38,9 @@ export default function About() {
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           <motion.div
-            ref={ref}
+            ref={detailsRef}
             initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={detailsInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-3"
           >
@@ -52,7 +54,7 @@ export default function About() {
                   { icon: User, label: 'Name', value: personalInfo.name },
                   { icon: GraduationCap, label: 'Degree', value: 'BS Information Technology' },
                   { icon: MapPin, label: 'Location', value: personalInfo.location.split(',')[0] + ', ' + personalInfo.location.split(',')[1]?.trim() },
-                  { icon: Calendar, label: 'Graduated', value: '2027' },
+                  { icon: Calendar, label: 'Expected graduation', value: '2027' },
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -74,9 +76,9 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            ref={ref}
+            ref={statsRef}
             initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={statsInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="lg:col-span-2 grid grid-cols-2 gap-4"
           >
@@ -84,7 +86,7 @@ export default function About() {
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                animate={statsInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
                 className="p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50 text-center card-hover"
               >
